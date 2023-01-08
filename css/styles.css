@@ -87,6 +87,13 @@
 
 .header {
   position: relative;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+.header img {
+  width: 100%;
 }
 .header .logo {
   width: 7rem;
@@ -212,11 +219,14 @@
 }
 .footer .socials-container {
   width: 100%;
-  height: 5rem;
+  height: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
+}
+.footer .socials-container img {
+  cursor: pointer;
 }
 
 .mt {
