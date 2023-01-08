@@ -1,0 +1,90 @@
+@use "./variables" as var;
+
+@use "sass:color";
+
+@mixin general-cta($cuztom-border) {
+  border: none;
+  padding: 0.75rem 4.5rem;
+  color: #ffffff;
+  border-radius: 2rem;
+  border-bottom: 4px solid $cuztom-border;
+
+  &:hover {
+    opacity: 0.75;
+    cursor: pointer;
+  }
+}
+
+@mixin general-container {
+  width: 100%;
+  text-align: center;
+  padding: 0.7rem;
+}
+
+@mixin general-title {
+  font-size: 1.8rem;
+  color: var.$Dark-Grayish-Blue;
+  margin-bottom: 1.5rem;
+}
+
+@mixin general-title-sm {
+  @include general-title();
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+@mixin general-description {
+  color: var.$Grayish-Blue;
+  line-height: 1.7rem;
+}
+
+.cta-ios {
+  @include general-cta(color.adjust(var.$Strong-Cyan, $blackness: 10%));
+  background-color: var.$Strong-Cyan;
+}
+
+.cta-mac {
+  @include general-cta(color.adjust(var.$Light-Blue, $blackness: 20%));
+  background-color: var.$Light-Blue;
+}
+
+.description-container {
+  @include general-container();
+
+  .title {
+    @include general-title();
+  }
+
+  .description {
+    @include general-description();
+  }
+
+}
+
+.card-container {
+  @include general-container();
+
+  img{
+    margin-bottom: 3rem;
+  }
+
+  .card-title {
+    @include general-title-sm();
+  }
+
+  .card-description{
+    @include general-description();
+  }
+}
+
+.mac-descriptions {
+  @include general-container();
+
+  .mac-title {
+    @include general-title-sm();
+  }
+
+  .mac-description {
+    @include general-description();
+  }
+}

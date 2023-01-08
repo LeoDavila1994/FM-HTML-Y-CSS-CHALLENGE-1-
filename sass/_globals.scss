@@ -1,0 +1,173 @@
+@use "./variables" as var;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var.$Family;
+  font-size: var.$Font-size;
+}
+
+.header {
+  position: relative;
+
+  .logo {
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    border: 7px solid var.$Strong-Cyan;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+      color: var.$Strong-Cyan;
+      font-size: 5rem;
+      font-weight: 600;
+    }
+  }
+
+}
+
+.cta-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: var.$ms;
+  margin-bottom: var.$mb;
+}
+
+.mac-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .mac-img-container {
+    width: 80%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.device-img-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.card-main {
+  width: 100%;
+}
+
+.logos-main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  .logo-container{
+    width: 8rem;
+    text-align: center;
+
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo-sm {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 2rem 0;
+    border: 4px solid var.$Strong-Cyan;
+    border-radius: 50% ;
+
+    p {
+      position: absolute;
+      top: 50%;
+      color: var.$Strong-Cyan;
+      transform: scale(2.7) translateY(-28%);
+      font-weight: 600;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: var.$Dark-Grayish-Blue;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .socials-container {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+.mt {
+  margin-top: var.$ms;
+}
+
+.mb {
+  margin-bottom: var.$ms;
+}
+
+.mbb {
+  margin-bottom: var.$mb;
+}
+
+
+
