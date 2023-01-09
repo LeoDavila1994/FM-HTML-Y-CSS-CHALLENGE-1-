@@ -27,8 +27,10 @@
 
 .description-container {
   width: 100%;
+  max-width: 650px;
   text-align: center;
   padding: 0.7rem;
+  margin: auto;
 }
 .description-container .title {
   font-size: 1.8rem;
@@ -42,8 +44,10 @@
 
 .card-container {
   width: 100%;
+  max-width: 650px;
   text-align: center;
   padding: 0.7rem;
+  margin: auto;
 }
 .card-container img {
   margin-bottom: 3rem;
@@ -62,8 +66,10 @@
 
 .mac-descriptions {
   width: 100%;
+  max-width: 650px;
   text-align: center;
   padding: 0.7rem;
+  margin: auto;
 }
 .mac-descriptions .mac-title {
   font-size: 1.8rem;
@@ -77,6 +83,18 @@
   line-height: 1.7rem;
 }
 
+@media (min-width: 768px) {
+  .cta-ios, .cta-mac {
+    padding: 0.75rem 1.5rem;
+  }
+  .description-container .title {
+    font-size: 2.2rem;
+  }
+  .mac-descriptions {
+    width: 380px;
+    text-align: left;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -86,14 +104,15 @@
 }
 
 .header {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 20rem;
-  overflow: hidden;
-  margin-bottom: 3rem;
-}
-.header img {
-  width: 100%;
+  background-image: url("../assets/img/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .header .logo {
   width: 7rem;
@@ -101,12 +120,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   border-radius: 50%;
   border: 7px solid hsl(171deg, 66%, 44%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .header .logo p {
   color: hsl(171deg, 66%, 44%);
@@ -143,6 +158,7 @@
 
 .device-img-container {
   width: 80%;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -216,6 +232,7 @@
 }
 .footer ul li a:hover {
   cursor: pointer;
+  color: hsl(171deg, 66%, 44%);
 }
 .footer .socials-container {
   width: 100%;
@@ -239,6 +256,125 @@
 
 .mbb {
   margin-bottom: 9rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-image: url("../assets/img/bg-header-desktop.png");
+  }
+  .cta-container {
+    max-width: 640px;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1440px) {
+  .mac-container {
+    max-width: 1440px;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+  .mac-container .mac-img-container {
+    width: 100%;
+  }
+  .mac-container .mac-img-container img {
+    transform: translateX(-4%);
+  }
+  .mac-container .mac-description-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 5rem 0 2rem;
+  }
+  .mac-container .mac-description-container .mb, .mac-container .mac-description-container .mbb {
+    margin: 0;
+  }
+  .card-main {
+    width: 85%;
+    max-width: 1440px;
+    display: flex;
+    margin: auto;
+  }
+  .card-main .mb {
+    margin-top: 0;
+  }
+  .logos-main-container {
+    flex-direction: row;
+  }
+  .logos-main-container .logo-container {
+    width: 10rem;
+    text-align: center;
+  }
+  .logos-main-container .logo-container img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7rem;
+  }
+  .footer .logo-sm {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 2rem 0;
+    border: 4px solid hsl(171deg, 66%, 44%);
+    border-radius: 50%;
+  }
+  .footer .logo-sm p {
+    position: absolute;
+    top: 50%;
+    color: hsl(171deg, 66%, 44%);
+    transform: scale(2.7) translateY(-28%);
+    font-weight: 600;
+  }
+  .footer .list-container {
+    width: 600px;
+    height: 100%;
+  }
+  .footer .list-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+  }
+  .footer .list-container ul li {
+    width: 200px;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  .footer .list-container ul li a {
+    text-decoration: none;
+    color: hsl(210deg, 10%, 33%);
+  }
+  .footer .list-container ul li a:hover {
+    cursor: pointer;
+    color: hsl(171deg, 66%, 44%);
+  }
+  .footer .socials-container {
+    width: auto;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footer .socials-container img {
+    cursor: pointer;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

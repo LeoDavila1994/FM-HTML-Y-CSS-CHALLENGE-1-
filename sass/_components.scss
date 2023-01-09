@@ -2,12 +2,13 @@
 
 @use "sass:color";
 
-@mixin general-cta($cuztom-border) {
+@mixin general-cta($cuztom-border, $cuztom-bg) {
   border: none;
   padding: 0.75rem 4.5rem;
   color: #ffffff;
   border-radius: 2rem;
   border-bottom: 4px solid $cuztom-border;
+  background-color: $cuztom-bg;
 
   &:hover {
     opacity: 0.75;
@@ -17,8 +18,10 @@
 
 @mixin general-container {
   width: 100%;
+  max-width: 650px;
   text-align: center;
   padding: 0.7rem;
+  margin: auto;
 }
 
 @mixin general-title {
@@ -39,13 +42,11 @@
 }
 
 .cta-ios {
-  @include general-cta(color.adjust(var.$Strong-Cyan, $blackness: 10%));
-  background-color: var.$Strong-Cyan;
+  @include general-cta(color.adjust(var.$Strong-Cyan, $blackness: 10%), var.$Strong-Cyan);
 }
 
 .cta-mac {
-  @include general-cta(color.adjust(var.$Light-Blue, $blackness: 20%));
-  background-color: var.$Light-Blue;
+  @include general-cta(color.adjust(var.$Light-Blue, $blackness: 20%), var.$Light-Blue);
 }
 
 .description-container {
@@ -86,5 +87,20 @@
 
   .mac-description {
     @include general-description();
+  }
+}
+
+@media (min-width: 768px) {
+  .cta-ios, .cta-mac {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .description-container .title {
+    font-size: 2.2rem;
+  }
+
+  .mac-descriptions {
+    width: 380px;
+    text-align: left;
   }
 }
